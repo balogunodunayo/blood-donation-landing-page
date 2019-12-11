@@ -68,7 +68,6 @@ body{
 	position: absolute;
 	top: 75%;
 	left: 50px;
-	display: block;
 	background-color: rgb(224, 54, 111);
 	padding: 20px 45px;
 	border-radius: 80px;
@@ -105,9 +104,41 @@ body{
 	box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
 }
 
+.btn::after{
+	content: "";
+	height: 100%;
+	width: 100%;
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border-radius: 80px;
+	-webkit-border-radius: 80px;
+	-moz-border-radius: 80px;
+	-ms-border-radius: 80px;
+	-o-border-radius: 80px;
+	z-index: -1;
+	transition: all .7s;
+	-webkit-transition: all .7s;
+	-moz-transition: all .7s;
+	-ms-transition: all .7s;
+	-o-transition: all .7s;
+}
+
+.btn:hover::after{
+	background-color: rgb(224, 54, 111);
+	opacity: 0;
+	transform: scale(1.5);
+	-webkit-transform: scale(1.5);
+	-moz-transform: scale(1.5);
+	-ms-transform: scale(1.5);
+	-o-transform: scale(1.5);
+}
+
 .image{
 	position: absolute;
 	left: 45%;
 	width: 50%;
 	height: 85%;
 }
+ 
